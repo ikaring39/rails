@@ -5,8 +5,8 @@
         <%= post.id %>
         <%= post.uuid %>
         <%= post.content %>
-        <%# 第三引数でpostリクエストを指定 %>
-        <%= link_to("削除","/user_delete/#{post.id}", {method: "post"}) %>
+        <%# 第三引数でpostリクエストを指定する %>
+        <%= link_to("削除","/user_delete/#{post.id}", {method: "delete"}) %>
       </div>
     <% end %>
   </div>
