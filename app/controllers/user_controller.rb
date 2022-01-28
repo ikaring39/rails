@@ -6,7 +6,8 @@ class UserController < ApplicationController
   end
   # DBからデータを削除
   def user_delete
-    Post.find(id: params[:id]).delete
+    @task = Post.find(params[:id])
+    @task.destroy
     redirect_to("/posts")
   end
 end
