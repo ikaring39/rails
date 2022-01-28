@@ -3,7 +3,10 @@
     <% @posts.each do |post| %>
       <div class="posts-item">
         <%= post.id %>
+        <%= post.uuid %>
         <%= post.content %>
+        <%# 第三引数でpostリクエストを指定 %>
+        <%= link_to("削除","/user_delete/#{post.id}", {method: "post"}) %>
       </div>
     <% end %>
   </div>

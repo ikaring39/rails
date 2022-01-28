@@ -1,6 +1,8 @@
 <h1>DB登録テスト</h1>
 <%= form_tag("/user_create") do %>
-<p>投稿内容</p>
-<input type="text" name="content"></input>
+<p>番号</p>
+<input type="text" name="uuid">
+<p>コンテンツ</p>
+<input type="text" name="content">
 <button type="submit">登録</button>
 <% end %>

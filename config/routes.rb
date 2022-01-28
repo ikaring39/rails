@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  resources :testdbs
+  resources :posts
+
   # DBを表示する
   get "test" => "testdbs#index"
 
@@ -10,6 +11,7 @@ Rails.application.routes.draw do
   get "posts" => "posts#index"
 
   post "user_create" => "user#user_create"
+  post "user_delete/#{:id}" => "user#user_delete"
 
   # hello,world!を表示する
   # root 'application#hello'
