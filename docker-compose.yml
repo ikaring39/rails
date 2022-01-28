@@ -5,8 +5,8 @@ services:
     volumes:
       - psgl_data:/var/lib/postgresql/data
     environment:
-      POSTGRES_USER:
-      POSTGRES_PASSWORD:
+      POSTGRES_USER: sakamoto
+      POSTGRES_PASSWORD: sakamoto
     ports:
       - 5433:5432
   web:
