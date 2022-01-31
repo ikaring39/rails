@@ -1,12 +1,13 @@
 class UserController < ApplicationController
   # DBにデータを追加
   def user_create
-    Post.create(:uuid => params[:uuid], :content => params[:content])
+    @board = Post.create(:uuid => params[:uuid], :content => params[:content])
     redirect_to("/posts")
   end
   # DBからデータを削除
-  def user_delete
-    Post.find(params[:id]).delete
+  def user_destroy
+    @board = Post.find(params[:id])
+    @board.destroy
     redirect_to("/posts")
   end
 end

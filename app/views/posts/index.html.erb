@@ -6,7 +6,8 @@
         <%= post.uuid %>
         <%= post.content %>
         <%# 第三引数でpostリクエストを指定する %>
-        <%= link_to("削除","/user_delete/#{post.id}", {method: "delete"}) %>
+        <%# linl_toだとGETでエラー発生する button_toで代替する %>
+        <%= button_to("削除","/user_destroy/#{post.id}", {method: "delete"}) %>
       </div>
     <% end %>
   </div>
