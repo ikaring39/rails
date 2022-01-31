@@ -21,9 +21,6 @@ Rails.application.routes.draw do
   # 今後対応 patch
   # データ削除
   delete "user_destroy/:id" => "user#user_destroy"
-
-  # hello,world!を表示する
-  # root 'application#hello'
   
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
