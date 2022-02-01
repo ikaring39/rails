@@ -14,13 +14,13 @@ Rails.application.routes.draw do
   get "home/register" => "home#register"
 
   # 新規作成
-  post "user_create" => "user#user_create"
+  post "posts" => "posts#create"
   # データ編集
   # 今後対応 get
   # データ更新
   # 今後対応 patch
   # データ削除
-  delete "user_destroy/:id" => "user#user_destroy"
+  delete "posts/:id" => "posts#destroy"
   
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

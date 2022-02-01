@@ -3,18 +3,18 @@
 <% end %>
 
 <div class="posts">
-  <div class="container">
-    <% @posts.each do |post| %>
-      <div class="posts-item">
-      <tr>
-        <td>id:<%= post.id %></td>
-        <td>uuid:<%= post.uuid %></td>
-        <td>content:<%= post.content %></td>
-        <%# 第三引数でpostリクエストを指定する %>
-        <%# linl_toだとGETでエラー発生する button_toで代替する %>
-        <td><%= button_to("削除","/user_destroy/#{post.id}", {method: "delete"}) %></td>
-      </tr>
-      </div>
-    <% end %>
-  </div>
+<div class="container">
+<% @posts.each do |post| %>
+<div class="posts-item">
+<tr>
+<td>id:<%= post.id %></td>
+<td>uuid:<%= post.uuid %></td>
+<td>content:<%= post.content %></td>
+<%# 第三引数でpostリクエストを指定する %>
+<%# linl_toだとGETでエラー発生する button_toで代替する %>
+<td><%= button_to("削除","/posts/#{post.id}", {method: "delete"}) %></td>
+</tr>
+</div>
+<% end %>
+</div>
 </div>

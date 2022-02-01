@@ -1,39 +1,39 @@
 <!DOCTYPE html>
 <html>
-  <!-- header -->
-  <head>
-  <title>AppName</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <%= csrf_meta_tags %>
-  <%= csp_meta_tag %>
-  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-  <%= javascript_importmap_tags %>
-  </head><!-- /header -->
+<!-- header -->
+<head>
+<title>AppName</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<%= csrf_meta_tags %>
+<%= csp_meta_tag %>
+<%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+<%= javascript_importmap_tags %>
+</head><!-- /header -->
 
-  <!-- menu -->
-  <div class="menu">
-    <ul class="menu-list">
-    <li class="menu-item"><%= link_to("top", "/top") %></li>
-    <li class="menu-item"><%= link_to("about", "/about") %></li>
-    <li class="menu-item"><%= link_to("posts", "/posts") %></li>
-    <li class="menu-item"><%= link_to("送信フォーム", "/home/register") %></li>
-    <li class="menu-item"><%= link_to("test", "/test") %></li>
-    </ul>
-  </div><!-- /menu -->
+<!-- menu -->
+<div class="menu">
+<ul class="menu-list">
+<li class="menu-item"><%= link_to("top", "/top") %></li>
+<li class="menu-item"><%= link_to("about", "/about") %></li>
+<li class="menu-item"><%= link_to("posts", "/posts") %></li>
+<li class="menu-item"><%= link_to("送信フォーム", new_post_path) %></li>
+<li class="menu-item"><%= link_to("test", "/test") %></li>
+</ul>
+</div><!-- /menu -->
 
-  <body>
-  <!-- main -->  
-  <div class="main">
-  <!-- gnav -->
-  <nav class ="gnav">
-  </nav><!-- /gnav -->
+<body>
+<!-- main -->  
+<div class="main">
+<!-- gnav -->
+<nav class ="gnav">
+</nav><!-- /gnav -->
 
-  <%= yield %>
-  </div><!-- /main -->
-  </body>
+<%= yield %>
+</div><!-- /main -->
+</body>
 
-  <!-- footer -->
-  <footer>
-  </footer><!-- /footer -->
+<!-- footer -->
+<footer>
+</footer><!-- /footer -->
 
 </html>
