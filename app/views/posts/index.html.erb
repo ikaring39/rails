@@ -1,13 +1,19 @@
+<% flash.each do |message_type, message| %>
+<div class="alert alert-<%= message_type %>"><%= message %></div>
+<% end %>
+
 <div class="posts">
   <div class="container">
     <% @posts.each do |post| %>
       <div class="posts-item">
-        <%= post.id %>
-        <%= post.uuid %>
-        <%= post.content %>
+      <tr>
+        <td>id:<%= post.id %></td>
+        <td>uuid:<%= post.uuid %></td>
+        <td>content:<%= post.content %></td>
         <%# 第三引数でpostリクエストを指定する %>
         <%# linl_toだとGETでエラー発生する button_toで代替する %>
-        <%= button_to("削除","/user_destroy/#{post.id}", {method: "delete"}) %>
+        <td><%= button_to("削除","/user_destroy/#{post.id}", {method: "delete"}) %></td>
+      </tr>
       </div>
     <% end %>
   </div>

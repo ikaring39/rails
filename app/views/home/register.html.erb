@@ -1,23 +1,14 @@
 <h1>DB登録テスト</h1>
-<%= form_with url:"/user_create" do |form| %>
-<p>番号</p>
-<input type="text" name="uuid">
-<p>コンテンツ</p>
-<input type="text" name="content">
-<button type="submit">登録</button>
-<% end %>
-
-<h2>テストフォーム</h2>
-
-
+<table border="1">
 <%= form_with url:"/user_create" do |form| %>
 <tr>
 <td><%= form.label :uuid %></td>
 <td><%= form.text_field :uuid %></td>
+</tr>
+<tr>
 <td><%= form.label :content %></td>
 <td><%= form.text_field :content %></td>
-<td><%= form.submit %></td>
+<td><%= form.submit :"登録" %></td>
 </tr>
-
 <% end %>
 </table>
