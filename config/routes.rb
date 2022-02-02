@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   #localhost:3000が初期画面なので差し替える
   get "/" => "home#index"
-  # home/topをtopとして表示する
+  # rails routesでpathを取得できる
   get "top" => "home#top"
   get "about" => "home#about"
   get "item" => "home#item"
