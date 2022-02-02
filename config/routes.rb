@@ -12,7 +12,6 @@ Rails.application.routes.draw do
   # rails routesでpathを取得できる
   get "top" => "home#top"
   get "about" => "home#about"
-  get "js" => "home#js"
   get "item" => "home#item"
   get "home/register" => "home#register"
 

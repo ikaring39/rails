@@ -3,8 +3,6 @@ class HomeController < ApplicationController
   end
   def about
   end
-  def js
-  end
   def item
   end
   def register

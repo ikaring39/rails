@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>AppName</title>
+    <title>PostName</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <%= javascript_include_tag "test.js" %>
+
   </head>
   
-  <!-- menu --><%= render "layouts/header" %><!-- /menu -->
+  <!-- menu --><%= render "layouts/common/header" %><!-- /menu -->
   
   <!-- main --><!-- /main -->    
     
@@ -18,6 +20,6 @@
     <%= yield %>
   </body>
   
-  <!-- footer --><%= render "layouts/footer" %><!-- /footer -->
+  <!-- footer --><%= render "layouts/common/footer" %><!-- /footer -->
 
 </html>
