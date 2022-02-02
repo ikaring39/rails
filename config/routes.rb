@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   # DBを表示する
   get "test" => "testdbs#index"
+  get "manual" => "manual#index"
 
   #localhost:3000が初期画面なので差し替える
   get "/" => "home#index"
@@ -14,6 +15,11 @@ Rails.application.routes.draw do
   get "posts" => "posts#index"
   post "user_create" => "user#user_create"
   get "user_delete/:id" => "user#user_delete"
+
+  post "data" => "data#regist"
+  get "data/:id" => "data#show"
+  put "data/:id" => "data#update"
+  delete "data/:id" => "data#destroy"
 
   # hello,world!を表示する
   # root 'application#hello'
