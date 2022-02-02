@@ -1,6 +1,6 @@
 <h1>DB登録テスト</h1>
 <table>
-<%= form_with url:"/user_create" do |form| %>
+<%= form_with model: @post do |form| %>
 <tr>
 <td><%= form.label :uuid %></td>
 <td><%= form.text_field :uuid %></td>
