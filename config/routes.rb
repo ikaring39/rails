@@ -17,9 +17,9 @@ Rails.application.routes.draw do
   # 新規作成
   post "posts" => "posts#create"
   # データ編集
-  # 今後対応 get
+  get "posts/:id/edit" => "posts#edit"
   # データ更新
-  # 今後対応 patch
+  patch "posts/:id" => "posts#update"
   # データ削除
   delete "posts/:id" => "posts#destroy"
   

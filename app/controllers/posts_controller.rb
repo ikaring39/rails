@@ -19,6 +19,18 @@ class PostsController < ApplicationController
     end
     redirect_to posts_path
   end
+  
+  # 編集
+  def edit
+    @post = Post.find(params[:id])
+  end
+
+  # 更新
+  def update
+    @post = Post.find(params[:id])
+    @post.update(post_params)
+    redirect_to posts_path
+  end
 
   # 削除
   def destroy

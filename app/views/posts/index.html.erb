@@ -10,6 +10,7 @@
           <td>id:<%= post.id %></td>
           <td>uuid:<%= post.uuid %></td>
           <td>content:<%= post.content %></td>
+          <td><%= link_to '編集', edit_post_path(post) %></td>
           <%# linl_toだとDELETEでエラー発生する button_toで代替する %>
           <td><%= button_to("削除","/posts/#{post.id}", {method: "delete"}) %></td>
         </tr>
