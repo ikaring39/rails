@@ -10,7 +10,7 @@
           <td>id:<%= post.id %></td>
           <td>uuid:<%= post.uuid %></td>
           <td>content:<%= post.content %></td>
-          <%# linl_toだとGETでエラー発生する button_toで代替する %>
+          <%# linl_toだとDELETEでエラー発生する button_toで代替する %>
           <td><%= button_to("削除","/posts/#{post.id}", {method: "delete"}) %></td>
         </tr>
       </div>

@@ -6,7 +6,6 @@ Rails.application.routes.draw do
   get "posts" => "posts#index"
   get "manual" => "manual#index"
 
-
   #localhost:3000が初期画面なので差し替える
   get "/" => "home#index"
   # rails routesでpathを取得できる
