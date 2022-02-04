@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   get "about" => "home#about"
   get "item" => "home#item"
   get "home/register" => "home#register"
-
+  get "todo" => "home#todo"
   # 新規作成
   post "posts" => "posts#create"
   # データ編集

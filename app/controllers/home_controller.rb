@@ -7,4 +7,6 @@ class HomeController < ApplicationController
   end
   def register
   end
+  def todo
+  end
 end
