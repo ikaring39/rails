@@ -14,6 +14,12 @@ const input = document.getElementById("input");
 const ul = document.getElementById("ul");
 
 const todos = JSON.parse(localStorage.getItem("todos"));
+if(todos){
+  console.log('true');
+}else{
+    console.log('false');
+}
+
 
 if(todos > 0){
     todos.forEach(todo => {
@@ -24,7 +30,7 @@ form.addEventListener("submit", function (event){
     // デフォルトのイベントを発生させない
     event.preventDefault();
     console.log(input.value);
-    add();
+    add(todos);
 });
 
 // リストを追加する
@@ -65,9 +71,10 @@ function add(todo){
 
 // ブラウザにデータを保存する
 function saveData(){
-    const lists = document.querySelectorAll("li")
+    const lists = document.getElementsByClassName("list-group-item");
+//    const lists = document.querySelectorAll(".list-group-item");
     let todos = [];
-    lists.forEach(list => {
+    Array.from(lists).forEach(list => {
         let todo = {
             text: list.innerText,
             completed: list.classList.contains("text-decoration-line-through")
