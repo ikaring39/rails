@@ -1,12 +1,30 @@
-// 変数を定義
-let text = "Hello World";
-// アラートで表示される
-//alert(text);
+// ページ読み込み時、既存リストから行数を取得する
+window.onload = function(){
+    const idNum = document.getElementsByClassName('id');
+    CalcPage(idNum.length);
+}
 
-// document.write("<p>" + text + "</p>");
-// デバッグのコンソールに表示される
-text += " hey"
-console.log(text);
+// 行数が n 以上の場合はページを pageNum に分ける
+function CalcPage(rowNum){
+    // ページ数のしきい値を設定する
+    let n = 3;
+    // ページ数は切り上げる
+    let pageNum = Math.ceil(rowNum / n);
+    // 複数ページの場合の処理
+    console.log(pageNum);
+    MakeButton(pageNum);
+}
+// pageNum の数値分ボタンを作成する
+function MakeButton(num){
+    const ul = document.getElementById("page");
+    console.log(ul);
+    for(let i = 1; i <= num; i++){
+        const li = document.createElement("li");
+        li.innerText = i;
+        li.classList.add("page-num");
+        ul.appendChild(li);
+    }
+}
 
 // TODOリスト作成する
 const form = document.getElementById("form");
